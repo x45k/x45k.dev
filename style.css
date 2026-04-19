@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1e1e24 0%, #121217 100%);
+    background: linear-gradient(135deg, #1e1e2f 0%, #0f0f1a 100%);
     background-attachment: fixed;
     min-height: 100vh;
     overflow: hidden;
@@ -39,6 +39,9 @@ body {
 }
 
 .splat {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 15px;
     height: 5px;
     border-top: 2px dotted rgba(255,255,255,0.25);
@@ -50,20 +53,18 @@ body {
 
 @keyframes drop {
     0% { transform: translateY(0); }
-    75% { transform: translateY(100vh); }
-    100% { transform: translateY(100vh); }
+    100% { transform: translateY(150vh); }
 }
 
 @keyframes stem {
     0% { opacity: 1; }
-    65% { opacity: 1; }
-    75% { opacity: 0; }
+    90% { opacity: 1; }
     100% { opacity: 0; }
 }
 
 @keyframes splat {
-    0% { opacity: 1; transform: scale(0); }
-    80% { opacity: 1; transform: scale(0); }
-    90% { opacity: 0.5; transform: scale(1); }
+    0% { opacity: 0; transform: scale(0); }
+    85% { opacity: 0; transform: scale(0); }
+    92% { opacity: 0.6; transform: scale(1); }
     100% { opacity: 0; transform: scale(1.5); }
 }
