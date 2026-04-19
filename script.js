@@ -4,11 +4,8 @@ function randomRange(min, max) {
 
 function createRaindrop(container) {
     const leftPos = randomRange(1, 99);
-    
     const personality = randomRange(1, 98);
-    
     const startOffset = randomRange(2, 8);
-    
     const delay = `0.${personality}s`;
     const duration = `0.5${personality}s`;
     
@@ -40,7 +37,6 @@ function createRaindrop(container) {
 function generateRain() {
     const container = document.querySelector('.rain-root');
     if (!container) throw new Error('rain-root not found');
-    
     const dropCount = 55;
     for (let i = 0; i < dropCount; i++) {
         createRaindrop(container);
